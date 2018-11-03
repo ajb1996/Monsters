@@ -8,7 +8,7 @@ namespace Monsters.core
 {
     class Combat
     {
-        public void ApplyMove(ref Monsters p, Move m)
+        public void ApplyMove(ref Monster p, Move m)
         {
             if (m.oEffect.oEffectType != EffectType.NONE && p.oCurrentEffect == EffectType.NONE)
             {

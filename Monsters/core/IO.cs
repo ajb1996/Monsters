@@ -16,7 +16,7 @@ namespace Monsters.core
             switch (i)
             {
                 case InputType.MENU:
-                    if (sInput.Equals("Monsters") || sInput.Equals("items") || sInput.Equals("attack"))
+                    if (sInput.Equals("monsters") || sInput.Equals("items") || sInput.Equals("attack"))
                     {
                         return sInput;
                     }
@@ -31,39 +31,37 @@ namespace Monsters.core
     {
         public static void PrintTeam(Team t)
         {
-            foreach (Monsters oMon in t.oTeam)
+            foreach (Monster oMon in t.oTeam)
             {
-
-
+                StringBuilder line = new StringBuilder();
+                line.Append(oMon.sName);
+                line.Append("       ");
+                line.Append(buildHealthBar(oMon.health));
+                line.Append("       ");
+                line.Append(oMon.oCurrentEffect.toString());
+                line.Append("       ");
+                line.Append(oMon.bFainted ? "Fainted" : ""  );
+                Console.WriteLine(line.ToString());
             }
         }
-
-        private static String buildHealthBar(Monsters oMon)
-        {
-            StringBuilder healthBar = new StringBuilder();
-            for (int i = 0; i < oMon.iHealth; i++)
-            {
-                healthBar.Append("|");
-            }
-            for (int i = 0; i < (100 - oMon.iHealth); i++)
-            {
-                healthBar.Append(".");
-            }
-            return healthBar.ToString();
-        }
-
         public static String buildHealthBar(int health)
         {
             StringBuilder healthBar = new StringBuilder();
-            for (int i = 0; i < health/2; i++)
+            for (int i = 0; i < health / 2; i++)
             {
                 healthBar.Append("|");
             }
-            for (int i = 0; i < (100 - health)/2; i++)
+            for (int i = 0; i < (100 - health) / 2; i++)
             {
                 healthBar.Append(".");
             }
             return healthBar.ToString();
+        }
+        public static void PrintMoves(Monster m)
+        {
+            foreach(Move move in m.aMoves){
+                
+            }
         }
     }
 

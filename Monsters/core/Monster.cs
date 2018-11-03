@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace Monsters.core
 {
-    class Monsters
+    class Monster
     {
         public String sName { get; set; }
         public int iHealth { get; set; }
-        public Move[] aMoves = new Move[4];
+        public List<Move> oMoves = new List<Move>();
         public EffectType oCurrentEffect { get; set; }
         public bool bFainted;
+        
+        public void AddMove(Move m)
+        {
+            if(oMoves.Count <= 4)
+            {
+                oMoves.Add(m);
+            }
+        }
     }
 }
