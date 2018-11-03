@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{2A73B803-6019-41BF-BF56-35D16748D9F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monsters", "Monsters\Monsters.csproj", "{2A73B803-6019-41BF-BF56-35D16748D9F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
