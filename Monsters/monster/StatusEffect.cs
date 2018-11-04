@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Monsters.core
+namespace Monsters.monster
 {
     class StatusEffect
     {
@@ -15,6 +15,6 @@ namespace Monsters.core
 
     public enum EffectType
     {
-        POISON,SLEEP,PARALYSIS,FREEZE,CONFUSE,NONE
+        POISON, SLEEP, PARALYSIS, FREEZE, CONFUSE, NONE
     }
 }
