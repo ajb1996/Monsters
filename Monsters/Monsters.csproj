@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="core\Combat.cs" />
-    <Compile Include="core\IO.cs" />
+    <Compile Include="mechanics\Combat.cs" />
+    <Compile Include="core\Enums.cs" />
+    <Compile Include="mechanics\IO.cs" />
     <Compile Include="monster\Monster.cs" />
     <Compile Include="monster\Move.cs" />
     <Compile Include="monster\StatusEffect.cs" />
