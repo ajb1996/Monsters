@@ -11,8 +11,6 @@ namespace Monsters
         static void Main(string[] args)
         {
             //Parser parser = new Parser();
-
-
             Console.WriteLine(Renderer.buildHealthBar(50));
             Console.ReadLine();
         }

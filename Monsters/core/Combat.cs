@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Monsters.monster;
 namespace Monsters.core
 {
     class Combat
@@ -23,14 +23,13 @@ namespace Monsters.core
 
     class Team
     {
-        public List<Monsters> oTeam = new List<Monsters>();
+        public List<Monster> oTeam = new List<Monster>();
 
-        public bool checkAllFainted()
+        public bool CheckAllFainted()
         {
             return oTeam.Where((p) => p != null)
                             .Select((p) => p.bFainted == true)
                                 .ToList().Count == oTeam.Count;
         }
     }
-
 }

@@ -27,40 +27,38 @@ namespace Monsters.monster
         private StatsList oBaseline;
         private StatsList oModifiers;
 
-        StatsManager(int a, int d, int s, int ac, int sa, int sd)
+        public StatsManager(int a, int d, int s, int ac, int sa, int sd)
         {
-            baseline = new StatsList();
+            oBaseline = new StatsList();
 
         }
 
-        StatsManager(StatsList s)
-        {
-            baseline = s;
-        }
+        public StatsManager(StatsList s) => oBaseline = s;
 
-        public getStat(StatName oStatToGet, bool bModified)
+        public int GetStat(StatName oStatToGet, bool bModified)
         {
             switch (oStatToGet)
             {
                 case StatName.ATTACK:
                     return bModified ? oBaseline.iAttack += oModifiers.iAttack : oBaseline.iAttack;
-                    break;
+
                 case StatName.DEFENCE:
                     return bModified ? oBaseline.iDefence += oModifiers.iDefence : oBaseline.iDefence;
-                    break;
+
                 case StatName.SPEED:
                     return bModified ? oBaseline.iSpeed += oModifiers.iSpeed : oBaseline.iSpeed;
-                    break;
+
                 case StatName.ACCURACY:
                     return bModified ? oBaseline.iAccuracy += oModifiers.iAccuracy : oBaseline.iAccuracy;
-                    break;
+
                 case StatName.SPECIALATTACK:
                     return bModified ? oBaseline.iSpecialAttack += oModifiers.iSpecialAttack : oBaseline.iSpecialAttack;
-                    break;
+
                 case StatName.SPECIALDEFENCE:
                     return bModified ? oBaseline.iSpecicalDefence += oModifiers.iSpecicalDefence : oBaseline.iSpecicalDefence;
-                    break;
             }
+
+            return 0;
         }
 
     }

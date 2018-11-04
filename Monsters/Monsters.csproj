@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="core\Combat.cs" />
-    <Compile Include="core\Move.cs" />
-    <Compile Include="core\Parser.cs" />
-    <Compile Include="core\Monsters.cs" />
-    <Compile Include="core\StatusEffect.cs" />
+    <Compile Include="core\IO.cs" />
+    <Compile Include="monster\Monster.cs" />
+    <Compile Include="monster\Move.cs" />
+    <Compile Include="monster\StatusEffect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
