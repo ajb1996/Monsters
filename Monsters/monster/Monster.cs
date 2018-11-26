@@ -69,6 +69,16 @@ namespace Monsters.monster
             return 0;
         }
 
+        public void ApplyStatChanges(StatsList toApply)
+        {
+            oModifiers.iAccuracy += toApply.iAccuracy;
+            oModifiers.iAttack += toApply.iAttack;
+            oModifiers.iDefence += toApply.iDefence;
+            oModifiers.iSpecialAttack += toApply.iSpecialAttack;
+            oModifiers.iSpecialDefence += toApply.iSpecialDefence;
+            oModifiers.iSpeed += toApply.iSpeed;
+        }
+
     }
 
     public class StatsList

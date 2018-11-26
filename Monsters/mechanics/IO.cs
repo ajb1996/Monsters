@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Monsters.core;
+using Monsters.monster;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Monsters.monster;
-using Monsters.core;
 namespace Monsters.mechanics
 {
-    static class Parser
+    internal static class Parser
     {
-        public static String GetInput(String sPrompt, Enums.InputType i)
+        public static string GetInput(string sPrompt, Enums.InputType i)
         {
             if (sPrompt != "")
             {
@@ -18,9 +17,9 @@ namespace Monsters.mechanics
             return Console.ReadLine().ToLower();
         }
 
-        public static String GetMenuChoice(String sPrompt, Enums.InputType i)
+        public static string GetMenuChoice(string sPrompt, Enums.InputType i)
         {
-            String sInput = GetInput(sPrompt, i);
+            string sInput = GetInput(sPrompt, i);
             switch (i)
             {
                 case Enums.InputType.MENU:
@@ -38,7 +37,7 @@ namespace Monsters.mechanics
 
         public static Move GetMove(List<Move> oMoves)
         {
-            String sMoveInput = Console.ReadLine().ToLower();
+            string sMoveInput = Console.ReadLine().ToLower();
             Move matchedMove = oMoves.Where((m) => m.sName.ToLower() == sMoveInput).FirstOrDefault();
             return matchedMove != null ? matchedMove : null;
         }
@@ -61,7 +60,7 @@ namespace Monsters.mechanics
                 Console.WriteLine(line.ToString());
             }
         }
-        public static String BuildHealthBar(int health)
+        public static string BuildHealthBar(int health)
         {
             StringBuilder healthBar = new StringBuilder();
             for (int i = 0; i < health / 2; i++)
@@ -74,7 +73,7 @@ namespace Monsters.mechanics
             }
             return healthBar.ToString();
         }
-        public static void WriteOut(String s)
+        public static void WriteOut(string s)
         {
             Console.WriteLine(s);
         }

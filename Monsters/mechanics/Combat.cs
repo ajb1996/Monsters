@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Monsters.core;
+using Monsters.monster;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Monsters.monster;
-using Monsters.core;
 namespace Monsters.mechanics
 {
     public class Combat

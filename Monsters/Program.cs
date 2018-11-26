@@ -38,6 +38,11 @@ namespace Monsters
 
 
                         Monster oEnemyCurrent = oCombat.player2.GetCurrent();
+                        if(oEnemyCurrent.oStats.GetStat(Enums.StatName.ACCURACY, true) >
+                                oCombat.player1.GetCurrent().oStats.GetStat(Enums.StatName.ACCURACY, true))
+                        {
+
+                        }
                         oCombat.ApplyMove(ref oEnemyCurrent, oSelectedMove);
 
 

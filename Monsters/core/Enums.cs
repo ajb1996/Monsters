@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Monsters.core
+﻿namespace Monsters.core
 {
     public static class Enums
     {
@@ -23,6 +17,10 @@ namespace Monsters.core
         public enum Type
         {
             BUG, DARK, DRAGON, ELECTRIC, FAIRY, FIGHTING, FIRE, FLYING, GHOST, GRASS, GROUND, ICE, NORMAL, POISON, PSYCHIC, ROCK, STEEL, WATER
+        }
+        public enum Target
+        {
+            SELF, OTHER
         }
     }
 }
